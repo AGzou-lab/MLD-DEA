@@ -840,7 +840,7 @@ class DistillKL_MLD(nn.Module):
             ) * mask).mean()) +  ((er_kd_loss(
                 logit_student,
                 logit_teacher,
-                6.0,
+                16.0,
                 # reduce=False
             ) * mask).mean())
         else:
