@@ -918,6 +918,6 @@ class DistillKL_MLD(nn.Module):
             6.0,
         ) * mask).mean())
 
-        loss_logits = loss_kd  + loss_bc
+        loss_logits = loss_kd  + loss_bc + loss_cc
 
         return loss_logits
